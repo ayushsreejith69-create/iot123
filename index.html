@@ -1,41 +1,20 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#10251c"><title>Sprout — Smart Plant</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10251c">
+  <title>Sprout — Smart Plant</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<<<<<<< HEAD
-<div class="app-shell">
-<header class="topbar"><a class="brand" href="#"><span class="brand-mark">✳</span><span>sprout<span class="brand-dot">.</span></span></a><div class="connection-pill"><span class="status-dot" id="statusDot"></span><span id="connectionText">Disconnected</span></div></header>
-<main>
-<section class="welcome"><div><p class="eyebrow">YOUR LITTLE GREEN SPACE</p><h1>Plant care,<br><span>made simple.</span></h1><p class="subheading">A little care goes a long way. Here's how your plant is doing.</p></div><div class="plant-art" aria-hidden="true"><div class="sun"></div><div class="leaf leaf-one"></div><div class="leaf leaf-two"></div><div class="leaf leaf-three"></div><div class="stem"></div><div class="pot"><div class="pot-rim"></div></div></div></section>
-<section class="section-heading"><div><p class="eyebrow">LIVE READINGS</p><h2>Your plant today</h2></div><span class="live-label"><span></span> LIVE</span></section>
-<section class="metrics">
-<article class="card moisture-card"><div class="card-top"><span class="metric-icon">◉</span><span class="mini-label">SOIL SENSOR</span></div><p class="metric-title">Soil moisture</p><div class="metric-value"><span id="moistureValue">--</span><small id="moistureUnit">%</small></div><div class="meter"><div id="moistureBar" class="meter-fill"></div></div><p id="moistureHint" class="muted">Waiting for sensor data…</p></article>
-<article class="card pump-card"><div class="card-top"><span class="metric-icon">↗</span><span class="mini-label">WATERING</span></div><p class="metric-title">Water pump</p><div class="pump-state"><span id="pumpIndicator" class="pump-indicator"></span><strong id="pumpState">Unknown</strong></div><p class="muted">Current pump state from your device.</p><div class="pump-actions"><button class="btn btn-primary" id="pumpOn" disabled>Turn on</button><button class="btn btn-secondary" id="pumpOff" disabled>Turn off</button></div></article>
-</section>
-<section class="card mode-card"><div class="mode-copy"><span class="metric-icon">⌁</span><div><h3>Watering mode</h3><p class="muted">Choose how your plant is cared for.</p></div></div><div class="mode-switch" role="group" aria-label="Watering mode"><button id="autoMode" class="mode-option active" disabled>✦ Auto</button><button id="manualMode" class="mode-option" disabled>☝ Manual</button></div><p class="mode-note" id="modeNote">Waiting for device mode…</p></section>
-<section class="card mode-card light-card"><div class="mode-copy"><span class="metric-icon">☼</span><div><h3>Grow light</h3><p class="muted">Control the plant light from your dashboard.</p></div></div><div class="mode-switch" role="group" aria-label="Grow light control"><button id="lightOn" class="mode-option" disabled>☀ On</button><button id="lightOff" class="mode-option active" disabled>○ Off</button></div><p class="mode-note" id="lightNote">Waiting for light state…</p></section>
-<section class="bottom-row"><div class="tip-card"><span class="tip-icon">✦</span><div><strong>A tiny tip</strong><p id="plantTip">Keep an eye on your soil moisture. Your plant will thank you.</p></div></div><button class="settings-button" id="openSettings"><span>⚙</span><span>Connection settings</span></button></section>
-</main><footer>MADE FOR GROWING THINGS <span>✳</span></footer>
-</div>
-<dialog id="settingsDialog" class="settings-dialog"><form id="settingsForm"><div class="dialog-heading"><div><p class="eyebrow">DEVICE CONNECTION</p><h2>Connection settings</h2></div><button type="button" class="close-button" id="closeSettings">×</button></div>
-<label for="brokerUrl">MQTT WebSocket URL</label><input id="brokerUrl" type="url" value="ws://test.mosquitto.org:8080/mqtt" required><p class="field-help">Browsers need MQTT over WebSockets. HTTPS-hosted sites should use a secure wss:// endpoint.</p>
-<label for="username">Username <span>(optional)</span></label><input id="username" autocomplete="username" placeholder="MQTT username">
-<label for="password">Password <span>(optional)</span></label><input id="password" type="password" autocomplete="current-password" placeholder="MQTT password">
-<div class="dialog-actions"><button type="button" id="disconnectButton" class="btn btn-secondary">Disconnect</button><button type="submit" class="btn btn-primary">Connect to broker</button></div><p id="settingsMessage" class="settings-message" role="status"></p></form></dialog>
-<div id="toast" class="toast" role="status" aria-live="polite"></div>
-<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script><script src="script.js"></script>
-</body></html>
-=======
   <div class="app-shell">
     <header class="topbar">
       <a class="brand" href="#" aria-label="Sprout home">
         <span class="brand-mark">✳</span>
         <span>sprout<span class="brand-dot">.</span></span>
       </a>
+
       <div class="connection-pill">
         <span class="status-dot" id="statusDot"></span>
         <span id="connectionText">Disconnected</span>
@@ -47,15 +26,20 @@
         <div>
           <p class="eyebrow">YOUR LITTLE GREEN SPACE</p>
           <h1>Plant care,<br><span>made simple.</span></h1>
-          <p class="subheading">A little care goes a long way. Here's how your plant is doing.</p>
+          <p class="subheading">
+            A little care goes a long way. Here's how your plant is doing.
+          </p>
         </div>
+
         <div class="plant-art" aria-hidden="true">
           <div class="sun"></div>
           <div class="leaf leaf-one"></div>
           <div class="leaf leaf-two"></div>
           <div class="leaf leaf-three"></div>
           <div class="stem"></div>
-          <div class="pot"><div class="pot-rim"></div></div>
+          <div class="pot">
+            <div class="pot-rim"></div>
+          </div>
         </div>
       </section>
 
@@ -73,10 +57,21 @@
             <span class="metric-icon">◉</span>
             <span class="mini-label">SOIL SENSOR</span>
           </div>
+
           <p class="metric-title">Soil moisture</p>
-          <div class="metric-value"><span id="moistureValue">--</span><small id="moistureUnit">%</small></div>
-          <div class="meter"><div id="moistureBar" class="meter-fill"></div></div>
-          <p id="moistureHint" class="muted">Waiting for sensor data…</p>
+
+          <div class="metric-value">
+            <span id="moistureValue">--</span>
+            <small id="moistureUnit">%</small>
+          </div>
+
+          <div class="meter">
+            <div id="moistureBar" class="meter-fill"></div>
+          </div>
+
+          <p id="moistureHint" class="muted">
+            Waiting for sensor data…
+          </p>
         </article>
 
         <article class="card pump-card">
@@ -84,15 +79,23 @@
             <span class="metric-icon">↗</span>
             <span class="mini-label">WATERING</span>
           </div>
+
           <p class="metric-title">Water pump</p>
+
           <div class="pump-state">
             <span id="pumpIndicator" class="pump-indicator"></span>
             <strong id="pumpState">Unknown</strong>
           </div>
+
           <p class="muted">Current pump state from your device.</p>
+
           <div class="pump-actions">
-            <button class="btn btn-primary" id="pumpOn" disabled>Turn on</button>
-            <button class="btn btn-secondary" id="pumpOff" disabled>Turn off</button>
+            <button class="btn btn-primary" id="pumpOn" disabled>
+              Turn on
+            </button>
+            <button class="btn btn-secondary" id="pumpOff" disabled>
+              Turn off
+            </button>
           </div>
         </article>
       </section>
@@ -105,50 +108,139 @@
             <p class="muted">Choose how your plant is cared for.</p>
           </div>
         </div>
+
         <div class="mode-switch" role="group" aria-label="Watering mode">
-          <button id="autoMode" class="mode-option active" disabled>✦ Auto</button>
-          <button id="manualMode" class="mode-option" disabled>☝ Manual</button>
+          <button id="autoMode" class="mode-option active" disabled>
+            ✦ Auto
+          </button>
+          <button id="manualMode" class="mode-option" disabled>
+            ☝ Manual
+          </button>
         </div>
-        <p class="mode-note" id="modeNote">Waiting for device mode…</p>
+
+        <p class="mode-note" id="modeNote">
+          Waiting for device mode…
+        </p>
+      </section>
+
+      <section class="card mode-card light-card">
+        <div class="mode-copy">
+          <span class="metric-icon">☼</span>
+          <div>
+            <h3>Grow light</h3>
+            <p class="muted">
+              Control the plant light from your dashboard.
+            </p>
+          </div>
+        </div>
+
+        <div class="mode-switch" role="group" aria-label="Grow light control">
+          <button id="lightOn" class="mode-option" disabled>
+            ☀ On
+          </button>
+          <button id="lightOff" class="mode-option active" disabled>
+            ○ Off
+          </button>
+        </div>
+
+        <p class="mode-note" id="lightNote">
+          Waiting for light state…
+        </p>
       </section>
 
       <section class="bottom-row">
         <div class="tip-card">
           <span class="tip-icon">✦</span>
-          <div><strong>A tiny tip</strong><p id="plantTip">Keep an eye on your soil moisture. Your plant will thank you.</p></div>
+          <div>
+            <strong>A tiny tip</strong>
+            <p id="plantTip">
+              Keep an eye on your soil moisture. Your plant will thank you.
+            </p>
+          </div>
         </div>
-        <button class="settings-button" id="openSettings" aria-label="Connection settings">
-          <span>⚙</span><span>Connection settings</span>
+
+        <button class="settings-button" id="openSettings">
+          <span>⚙</span>
+          <span>Connection settings</span>
         </button>
       </section>
     </main>
-    <footer>MADE FOR GROWING THINGS <span>✳</span></footer>
+
+    <footer>
+      MADE FOR GROWING THINGS <span>✳</span>
+    </footer>
   </div>
 
   <dialog id="settingsDialog" class="settings-dialog">
     <form id="settingsForm">
       <div class="dialog-heading">
-        <div><p class="eyebrow">DEVICE CONNECTION</p><h2>Connection settings</h2></div>
-        <button type="button" class="close-button" id="closeSettings" aria-label="Close settings">×</button>
+        <div>
+          <p class="eyebrow">DEVICE CONNECTION</p>
+          <h2>Connection settings</h2>
+        </div>
+
+        <button
+          type="button"
+          class="close-button"
+          id="closeSettings"
+          aria-label="Close settings"
+        >×</button>
       </div>
+
       <label for="brokerUrl">MQTT WebSocket URL</label>
-      <input id="brokerUrl" name="brokerUrl" type="url" value="wss://test.mosquitto.org:9001" required placeholder="ws://192.168.1.10:9001">
-      <p class="field-help">Use your broker's reachable WebSocket address. Port 1883 is usually raw MQTT and won't work in a browser.</p>
-      <label for="username">Username <span>(optional)</span></label>
-      <input id="username" name="username" autocomplete="username" placeholder="MQTT username">
-      <label for="password">Password <span>(optional)</span></label>
-      <input id="password" name="password" type="password" autocomplete="current-password" placeholder="MQTT password">
+      <input
+        id="brokerUrl"
+        type="url"
+        value="ws://test.mosquitto.org:8080/mqtt"
+        required
+        placeholder="wss://your-broker.example/mqtt"
+      >
+
+      <p class="field-help">
+        Browsers need MQTT over WebSockets. HTTPS-hosted sites should use
+        a secure wss:// endpoint.
+      </p>
+
+      <label for="username">
+        Username <span>(optional)</span>
+      </label>
+      <input
+        id="username"
+        autocomplete="username"
+        placeholder="MQTT username"
+      >
+
+      <label for="password">
+        Password <span>(optional)</span>
+      </label>
+      <input
+        id="password"
+        type="password"
+        autocomplete="current-password"
+        placeholder="MQTT password"
+      >
+
       <div class="dialog-actions">
-        <button type="button" id="disconnectButton" class="btn btn-secondary">Disconnect</button>
-        <button type="submit" class="btn btn-primary">Connect to broker</button>
+        <button
+          type="button"
+          id="disconnectButton"
+          class="btn btn-secondary"
+        >
+          Disconnect
+        </button>
+
+        <button type="submit" class="btn btn-primary">
+          Connect to broker
+        </button>
       </div>
+
       <p id="settingsMessage" class="settings-message" role="status"></p>
     </form>
   </dialog>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
   <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
->>>>>>> dda79b1ed8c5ef695c4a75c85e2ae349cd3abbdd
